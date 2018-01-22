@@ -1,0 +1,172 @@
+layout: simple
+extends: default.liquid
+title: 'Startseite'
+---
+
+<div class="" style="background-color: #1e9890">
+  <div class="container pt-5 mb-2">
+    <div class="row pt-5">
+      <div class="col pt-5 pb-1 text-white">
+        <h1>{{site.title}}</h1>
+        <h3>{{site.description}}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10 mt-5">
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass!
+      </p>
+      <p class="text-right">
+        <a class="btn btn-outline-primary" href="#formular">Jetzt mitmachen!</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="mt-5" style="background-image: url(/assets/images/backdrops/thomas-somme-220647-bw.jpg); background-size: cover; background-position: right bottom; min-height: 400px">
+
+<div class="container mt-5 text-white ">
+  <div class="row">
+    <h3 class="col-md-3 mt-5 pb-2 border-left border-primary">Neuigkeiten</h3>
+  </div>
+  <div class="row justify-content-center mt-4">
+      <div class="col">
+      {% assign post = posts|first%}
+      <span class="text-muted">{{post.published_date | date:"%d.%m.%Y"}}</span>
+      <a href="{{post.path}}"><h4>{{post.title}}</h4></a>
+      {{post.excerpt}}
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    {% for post in posts %}
+      {% unless forloop.first %}
+      <div>
+        <a title="Post vom {{post.published_date | date:"%d.%m.%Y"}}" href="{{post.path}}">{{post.title}}</a>
+      </div>
+      {% endunless %}
+    {% endfor %}
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="container beteiligte  mt-5 ">
+  <div class="row">
+    <h3 class="col-md-3 mt-5 pb-2 mb-2 border-left border-primary">Koalition</h3>
+  </div>
+  <div class="row justify-content-center align-items-center mt-4">
+    <a class="col-md-3" href="https://bewegung.jetzt/"><img src="/assets/images/logos/dib_logo.svg" alt="Logo von DEMOKRATIE IN BEWEGUNG."></a>
+
+    <a class="col-md-2" href="http://europeanmovement.eu/"><img src="/assets/images/logos/european.png" alt="Logo von The European Movement."></a>
+
+    <a class="col-md-2" href="http://diem25berlin.org/"><img src="/assets/images/logos/diem.png" alt="Logo von DIEM25 Berlin."></a>
+
+    <a class="col-md-3" href="https://www.kleinerfuenf.de/"><img src="/assets/images/logos/jkeiner_fuenf_logo_100_.png" alt="Logo von Kleiner Fünf."></a>
+  </div>
+</div>
+
+
+
+<div class="mt-5" style="background-image: url(/assets/images/backdrops/samuel-zeller-358865-bw.jpg); background-size: cover; background-position: center top; min-height: 650px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 text-white p-3">
+        <h3 class="mt-3">Sei dabei!</h3>
+      </div>
+<div id="mauticform_wrapper_prokosignup" class="mauticform_wrapper col-md-8">
+    <form autocomplete="false" role="form" method="post" action="https://mautic.bewegung.jetzt/form/submit?formId=8" id="mauticform_prokosignup"  data-mautic-form="prokosignup" enctype="multipart/form-data">
+        <div class="mauticform-innerform container text-muted">
+
+            
+          <div class="mauticform-page-wrapper mauticform-page-1 row mb-4" data-mautic-form-page="1">
+        <div class="mauticform-error  col-md-12 alert alert-warning"id="mauticform_prokosignup_error"></div>
+        <div class="mauticform-message col-md-12 alert alert-success" id="mauticform_prokosignup_message"></div>
+
+            <div id="mauticform_prokosignup_vorname" class="mauticform-row mauticform-text mauticform-field-1 col-md-6  mt-2">
+                <input id="mauticform_input_prokosignup_vorname" name="mauticform[vorname]" value="" placeholder="Vorname" class="mauticform-input form-control" type="text" />
+                <span class="mauticform-errormsg" style="display: none;"></span>
+            </div>
+
+            <div id="mauticform_prokosignup_nachn" class="mauticform-row mauticform-text mauticform-field-2 mauticform-required col-md-6  mt-2" data-validate="nachn" data-validation-type="text">
+                <input id="mauticform_input_prokosignup_nachn" name="mauticform[nachn]" value="" placeholder="Nachname" class="mauticform-input form-control" type="text" />
+                <span class="mauticform-errormsg" style="display: none;">Erforderlich</span>
+            </div>
+
+            <div id="mauticform_prokosignup_email" class="mauticform-row mauticform-email mauticform-field-3 mauticform-required col-md-6  mt-2" data-validate="email" data-validation-type="email">
+                <input id="mauticform_input_prokosignup_email" name="mauticform[email]" value="" placeholder="E-Mail Adresse" class="mauticform-input form-control" type="email" />
+                <span class="mauticform-errormsg" style="display: none;">Erforderlich</span>
+            </div>
+
+            <div id="mauticform_prokosignup_telefon" class="mauticform-row mauticform-text mauticform-field-4 col-md-6  mt-2">
+                <input id="mauticform_input_prokosignup_telefon" name="mauticform[telefon]" value="" placeholder="ggf. Telefonnummer" class="mauticform-input form-control" type="text" />
+                <span class="mauticform-errormsg" style="display: none;"></span>
+            </div>
+
+            <div id="mauticform_prokosignup_organisation" class="mauticform-row mauticform-text mauticform-field-5 col-md-12 mt-2">
+                <input id="mauticform_input_prokosignup_organisation" name="mauticform[organisation]" value="" placeholder="(ggf.) Organisation" class="mauticform-input form-control" type="text" />
+                <span class="mauticform-errormsg" style="display: none;"></span>
+            </div>
+
+            <div id="mauticform_prokosignup_optionen" class="mauticform-row mauticform-checkboxgrp mauticform-field-6 col-md-12 my-3">
+                    <label id="mauticform_checkboxgrp_label_optionen_koalition0" for="mauticform_checkboxgrp_checkbox_optionen_koalition0" class="mauticform-checkboxgrp-label">
+                        <input  class="mauticform-checkboxgrp-checkbox" name="mauticform[optionen][]" id="mauticform_checkboxgrp_checkbox_optionen_koalition0" type="checkbox" value="koalition" />
+                        Bitte kontaktiert mich bezüglich einer Teilnahme meiner Organisation an der Koalition
+                    </label>
+                    <label id="mauticform_checkboxgrp_label_optionen_newsletter1" for="mauticform_checkboxgrp_checkbox_optionen_newsletter1" class="mauticform-checkboxgrp-label">
+                        <input  class="mauticform-checkboxgrp-checkbox" name="mauticform[optionen][]" id="mauticform_checkboxgrp_checkbox_optionen_newsletter1" type="checkbox" value="newsletter" />
+                        Bitte haltet mich bezüglich der ProKo auf dem Laufenden
+                    </label>
+                <span class="mauticform-errormsg" style="display: none;"></span>
+            </div>
+
+            <div id="mauticform_prokosignup_nachricht" class="mauticform-row mauticform-text mauticform-field-7 col-md-12 mt-3 mb-2">
+                <label id="mauticform_label_prokosignup_nachricht" for="mauticform_input_prokosignup_nachricht" class="mauticform-label">Nachricht</label><br/>
+                <span class="mauticform-helpmessage"><small>Gibt es sonst noch etwas, was Du uns an dieser Stelle mitteilen möchtest?</small></span>
+                <textarea id="mauticform_input_prokosignup_nachricht" name="mauticform[nachricht]" class="mauticform-textarea form-control"></textarea>
+                <span class="mauticform-errormsg" style="display: none;"></span>
+            </div>
+
+            <div id="mauticform_prokosignup_submit"  class="mauticform-row mauticform-button-wrapper col-md-12 mauticform-field-8 text-right">
+                <button type="submit" name="mauticform[submit]" id="mauticform_input_prokosignup_submit" name="mauticform[submit]" value="" class="mauticform-button btn btn-primary" value="1">Abschicken</button>
+            </div>
+            </div>
+        </div>
+
+        <input type="hidden" name="mauticform[formId]" id="mauticform_prokosignup_id" value="8"/>
+        <input type="hidden" name="mauticform[return]" id="mauticform_prokosignup_return" value=""/>
+        <input type="hidden" name="mauticform[formName]" id="mauticform_prokosignup_name" value="prokosignup"/>
+
+        </form>
+</div>
+<script type="text/javascript">
+    /** This section is only needed once per page if manually copying **/
+    if (typeof MauticSDKLoaded == 'undefined') {
+        var MauticSDKLoaded = true;
+        var head            = document.getElementsByTagName('head')[0];
+        var script          = document.createElement('script');
+        script.type         = 'text/javascript';
+        script.src          = 'https://mautic.bewegung.jetzt/media/js/mautic-form.js';
+        script.onload       = function() {
+            MauticSDK.onLoad();
+        };
+        head.appendChild(script);
+        var MauticDomain = 'https://mautic.bewegung.jetzt';
+        var MauticLang   = {
+            'submittingMessage': "Bitte warten..."
+        }
+    }
+</script>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,11 @@
 extends: default.liquid
 
-title: First Post
-draft: true
+title: Koalier mit Uns!
+published_date:  21 January 2018 19:00:00 +01:00
 ---
 
-# This is our first Post!
+Denn wir sind schnieke!
 
-Welcome to the first post ever on cobalt.rs!
+# Dies ist Teil Zwei
+
+Denn so geht es weiter!
