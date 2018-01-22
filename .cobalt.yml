@@ -1,6 +1,6 @@
-name: Progressive Koalition
-description: CLAIM-CLAIM-CLAIM
-
+name: "Progressive Koalition"
+description: '#ProKo statt GroKo'
+post_path: "/news/:slug/"
 
 
 source: "."
