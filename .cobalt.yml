@@ -1,5 +1,5 @@
-name: "Progressive Koalition"
-description: '#ProKo statt GroKo'
+name: "#ProKo statt GroKo"
+description: 'Vorschläge für einen progressiven Koalitionsvertrag'
 post_path: "/news/:slug/"
 
 
