@@ -1,4 +1,4 @@
-extends: page.liquid
+extends: post.liquid
 
 title: Wir schreiben den progressiven Koalitionsvertrag
 published_date:  21 January 2018 19:00:00 +01:00
@@ -15,6 +15,8 @@ Nun haben sich SPD und Union zusammengerauft und wollen es nochmal versuchen mit
 Gibt es keine großen Ideen, keine Visionen, keine Utopien mehr für eine gerechte, eine zukunftsfähige Gesellschaft?
 
 Natürlich gibt es die! Sie finden nur immer seltener ihren Weg in die Parteizentralen und Fraktionssäle der großen Parteien. 
+
+
 
 ### \#ProKo statt #GroKo
 

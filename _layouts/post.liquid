@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include header.html %}
+  </head>
+  <body>
+
+    <main id="content" class="post" role="main">
+      {% include page_head.html %}
+     <div class="container mb-2">
+        <div class="row justify-content-md-center">
+          <div  class="col-md-10">
+
+            {{content}}
+
+            <p class="text-muted text-right">Veröffentlicht am {{published_date | date:"%d.%m.%Y"}}</p>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>
