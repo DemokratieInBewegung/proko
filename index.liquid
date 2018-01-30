@@ -48,10 +48,11 @@ title: 'Startseite'
       <p class="text-right"><a href="{{post.path}}" class="btn btn-outline-light btn-sm">weiterlesen</a></p>
     </div>
   </div>
-  <div class="row justify-content-center">
+  <div class="row justify-content-center py-3" style="font-size: 0.85em">
+    <div>Weitere Neuigkeiten: </div>
     {% for post in posts %}
       {% unless forloop.first %}
-      <div>
+      <div >
         <a title="Post vom {{post.published_date | date:"%d.%m.%Y"}}" href="{{post.path}}">{{post.title}}</a>
       </div>
       {% endunless %}
