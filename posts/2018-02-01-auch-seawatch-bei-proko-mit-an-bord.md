@@ -1,6 +1,6 @@
 extends: post.liquid
 
-title: "Auch Sea-Watch bei #ProKo mit an Board!"
+title: "Auch Sea-Watch bei #ProKo mit an Bord!"
 published_date:  01 February 2018 11:00:00 +01:00
 thin_boxed: 1
 ---
