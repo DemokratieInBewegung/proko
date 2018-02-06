@@ -48,7 +48,7 @@ title: 'Startseite'
 
 <div class="mt-5" style="background-image: url(/assets/images/backdrops/thomas-somme-220647-bw.jpg); background-size: cover; background-position: right bottom; min-height: 400px">
 
-<div class="container mt-5 text-white ">
+<div class="container mt-5 text-white">
   <div class="row">
     <h3 class="col-md-3 mt-5 pb-2 border-left border-primary">Neuigkeiten</h3>
   </div>
@@ -61,15 +61,15 @@ title: 'Startseite'
       <p class="text-right"><a href="{{post.path}}" class="btn btn-outline-light btn-sm">weiterlesen</a></p>
     </div>
   </div>
-  <div class="row justify-content-center py-3" style="font-size: 0.85em">
-    <div>Weitere Neuigkeiten: </div>
-    {% for post in posts %}
-      {% unless forloop.first %}
-      <div >
-        <a title="Post vom {{post.published_date | date:"%d.%m.%Y"}}" href="{{post.path}}">{{post.title}}</a>
-      </div>
-      {% endunless %}
-    {% endfor %}
+  <div class="row justify-content-start py-3" style="font-size: 0.85em">
+    <div class="mr-2">Weitere Neuigkeiten: </div>
+      <ul class="list-unstyled">
+        {% for post in posts %}
+          {% unless forloop.first %}
+            <li> <a title="Post vom {{post.published_date | date:"%d.%m.%Y"}}" href="{{post.path}}">{{post.title}}</a></li>
+          {% endunless %}
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </div>
