@@ -43,12 +43,12 @@ Wachsende Ungleichheit, Klimawandl und technologische Umwälzungen. Die Herausfo
         </div>
         <div class="pb-2 pt-2" style="background: rgb(230, 230, 230); font-size: 0.7em">
           <div class="p-3">
-            <strong class="text-muted">12.450 Unterschriften</strong><br/>
+            <strong class="text-muted"><span id='js-cur_label'>12.450</span> Unterschriften</strong><br/>
             <p class="m-0 text-right">
-              noch 2.550 Unterschriften bis 15k
+              noch <span id='js-remaining'>2.550</span> Unterschriften bis <span id='js-next-level'>15k</span>
             </p>
             <div class="progress mx-2 bg-white">
-              <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+              <div id='js-progressbar-current' class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
         </div>
@@ -425,6 +425,60 @@ Wachsende Ungleichheit, Klimawandl und technologische Umwälzungen. Die Herausfo
     </form>
   </div>
 </div>
+<script type="text/javascript">
+  (function() {
+    var UPDATE_URL = 'http://localhost:5000/mauticor/petition_info/proko.json';
+    function text_format(n) {
+      return String(n).replace(/( )(?=(\d{3})+$)/g,'$1,')
+    }
+    function refresh_state() {
+      $.getJSON(UPDATE_URL).then((resp) => {
+        var total = parseInt(resp.total);
+        var next = 1000000;
+        var next_pretty = "1M"
+        if ((total) > 100000) {
+
+        } else if (total > 50000) { // 50.000
+          next = 100000
+          next_pretty = "100k"
+        } else if (total > 25000) {
+          next = 50000
+          next_pretty = "50k"
+        } else if (total > 15000) {
+          next = 25000
+          next_pretty = "25k"
+        } else if (total > 10000) {
+          next = 15000
+          next_pretty = "15k"
+        } else if (total > 5000) {
+          next = 10000
+          next_pretty = "10k"
+        } else if (total > 3000) {
+          next = 5000
+          next_pretty = "5k"
+        } else if (total > 2000) {
+          next = 3000
+          next_pretty = "3k"
+        } else if (total > 1000) {
+          next = 2000
+          next_pretty = "2k"
+        } else if (total > 500) {
+          next = 1000
+          next_pretty = "1k"
+        } else {
+          total = 751
+          next = 1000
+          next_pretty = "1k"
+        }
+        $("#js-cur_label").html(text_format(total));
+        $("#js-remaining").html(text_format(next - total));
+        $("#js-next-level").html(next_pretty);
+        $("#js-progressbar-current").css({width: (total * 100 / next) + "%"});
+      })
+    }
+    $(refresh_state);
+  })()
+</script>
 <script type="text/javascript">
     /** This section is only needed once per page if manually copying **/
     if (typeof MauticSDKLoaded == 'undefined') {

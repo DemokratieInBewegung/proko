@@ -1,10 +1,17 @@
 <script
-        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
         crossorigin="anonymous"></script>
         
 <script src="{{ site.baseurl }}/assets/bootstrap.bundle.min.js"></script>
-
+<script type="text/javascript">
+  $(function(){
+    console.log($);
+    console.log(window.__GLOBAL_EXEC_CACHE);
+    for (var i = 0; i < window.__GLOBAL_EXEC_CACHE.length; i ++) {
+      $(window.__GLOBAL_EXEC_CACHE[i])
+    }
+  });
+</script>
 
 <!-- Piwik -->
 <script type="text/javascript">
