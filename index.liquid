@@ -39,14 +39,14 @@ title: 'ProKo statt GroKo - Jetzt Unterschreiben'
           <p class="m-0">
           Wir fordern die Erarbeitung einer progressive Agenda für Deutschland, Europa und die Welt, zusammen mit der Zivilgesellschaft.</p>
         </div>
-        <div class="pb-2 pt-2" style="display:none; background: rgb(230, 230, 230); font-size: 0.7em">
+        <div class="pb-2 pt-2" style="background: rgb(230, 230, 230); font-size: 0.7em">
           <div class="p-3">
-            <strong class="text-muted"><span id='js-cur_label'>12.450</span> Unterschriften</strong><br/>
+            <strong class="text-muted"><span id='js-cur_label'>43</span> Unterschriften</strong><br/>
             <p class="m-0 text-right">
-              noch <span id='js-remaining'>2.550</span> Unterschriften bis <span id='js-next-level'>15k</span>
+              noch <span id='js-remaining'>7</span> Unterschriften bis <span id='js-next-level'>50</span>
             </p>
             <div class="progress mx-2 bg-white">
-              <div id='js-progressbar-current' class="progress-bar bg-pink" role="progressbar" style="width: 25%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+              <div id='js-progressbar-current' class="progress-bar bg-pink" role="progressbar" style="width: 86%" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
         </div>
@@ -430,37 +430,43 @@ title: 'ProKo statt GroKo - Jetzt Unterschreiben'
         var next_pretty = "1M"
         if ((total) > 100000) {
 
-        } else if (total > 50000) { // 50.000
+        } else if (total >= 50000) { // 50.000
           next = 100000
           next_pretty = "100k"
-        } else if (total > 25000) {
+        } else if (total >= 25000) {
           next = 50000
           next_pretty = "50k"
-        } else if (total > 15000) {
+        } else if (total >= 15000) {
           next = 25000
           next_pretty = "25k"
-        } else if (total > 10000) {
+        } else if (total >= 10000) {
           next = 15000
           next_pretty = "15k"
-        } else if (total > 5000) {
+        } else if (total >= 5000) {
           next = 10000
           next_pretty = "10k"
-        } else if (total > 3000) {
+        } else if (total >= 3000) {
           next = 5000
           next_pretty = "5k"
-        } else if (total > 2000) {
+        } else if (total >= 2000) {
           next = 3000
           next_pretty = "3k"
-        } else if (total > 1000) {
+        } else if (total >= 1000) {
           next = 2000
           next_pretty = "2k"
-        } else if (total > 500) {
+        } else if (total >= 500) {
           next = 1000
           next_pretty = "1k"
+        } else if (total >= 100) {
+          next = 500
+          next_pretty = "500"
+        } else if (total >= 50) {
+          next = 100
+          next_pretty = "100"
         } else {
-          total = 751
-          next = 1000
-          next_pretty = "1k"
+          total = 43
+          next = 50
+          next_pretty = "50"
         }
         $("#js-cur_label").html(text_format(total));
         $("#js-remaining").html(text_format(next - total));
