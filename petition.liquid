@@ -6,7 +6,7 @@ title: 'ProKo statt GroKo - Jetzt Unterschreiben'
 <div class="" style="background-color: #1e9890">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-2">
+        <div class="col-md-3">
           <a href="/">
             <img src="/assets/images/logos/proko.png" class='w-100' alt="Logo der Progressiven Koaltion: ein Kreis aus bunten, überlappenden Streifen, daneben der Text 'Progressive Koalition'" />
           </a>
@@ -46,7 +46,7 @@ title: 'ProKo statt GroKo - Jetzt Unterschreiben'
               noch <span id='js-remaining'>2.550</span> Unterschriften bis <span id='js-next-level'>15k</span>
             </p>
             <div class="progress mx-2 bg-white">
-              <div id='js-progressbar-current' class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+              <div id='js-progressbar-current' class="progress-bar bg-pink" role="progressbar" style="width: 25%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@ title: 'ProKo statt GroKo - Jetzt Unterschreiben'
                 </div>
 
                 <div id="mauticform_prokopetition_submit"  class="mauticform-row mauticform-button-wrapper mauticform-field-5 col-md-12 my-2 text-right">
-                    <button type="submit" name="mauticform[submit]" id="mauticform_input_prokopetition_submit" name="mauticform[submit]" value="" class="mauticform-button btn btn-primary" value="1">Unterzeichnen</button>
+                    <button type="submit" name="mauticform[submit]" id="mauticform_input_prokopetition_submit" name="mauticform[submit]" value="" class="mauticform-button btn btn-pink" value="1">Unterzeichnen</button>
                 </div>
                 </div>
             </div>
@@ -311,13 +311,13 @@ title: 'ProKo statt GroKo - Jetzt Unterschreiben'
 
   <div class="container mt-5 text-white">
     <div class="row">
-      <h3 class="col-md-3 mt-5 pb-2 border-left border-primary">Neuigkeiten</h3>
+      <h3 class="col-md-3 mt-5 pb-2 border-left border-pink">Neuigkeiten</h3>
     </div>
     <div class="row justify-content-start mt-4">
         <div class="col-md-10">
         {% assign post = posts|first%}
         <span class="text-muted">{{post.published_date | date:"%d.%m.%Y"}}</span>
-        <a href="{{post.path}}"><h4>{{post.title}}</h4></a>
+        <a class="text-pink" href="{{post.path}}"><h4>{{post.title}}</h4></a>
         {{post.excerpt}}
         <p class="text-right"><a href="{{post.path}}" class="btn btn-outline-light btn-sm">weiterlesen</a></p>
       </div>
@@ -327,7 +327,7 @@ title: 'ProKo statt GroKo - Jetzt Unterschreiben'
         <ul class="list-unstyled">
           {% for post in posts %}
             {% unless forloop.first %}
-              <li> <a title="Post vom {{post.published_date | date:"%d.%m.%Y"}}" href="{{post.path}}">{{post.title}}</a></li>
+              <li> <a class="text-pink" title="Post vom {{post.published_date | date:"%d.%m.%Y"}}" href="{{post.path}}">{{post.title}}</a></li>
             {% endunless %}
           {% endfor %}
         </ul>
